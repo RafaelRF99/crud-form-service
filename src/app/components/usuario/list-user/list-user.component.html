@@ -1,0 +1,13 @@
+<div class="box" *ngIf="usuarios.length > 0">
+  <div class="list" *ngFor="let usuario of usuarios">
+    <p>Nome: {{ usuario.nome }}</p>
+    <p>Descrição: {{ usuario.descricao }}</p>
+    <button (click)="editar(usuario)">Editar</button>
+    <hr />
+  </div>
+</div>
+<app-editar-user
+  *ngIf="statusEditar"
+  [usuario]="usuarioSelecionado"
+  (edicaoFinalizada)="concluir()"
+></app-editar-user>

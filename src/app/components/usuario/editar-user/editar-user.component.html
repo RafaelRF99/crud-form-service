@@ -1,0 +1,11 @@
+<form [formGroup]="form">
+  <div>
+    <label>Nome</label>
+    <input type="text" formControlName="nome" />
+  </div>
+  <div>
+    <label>Descrição</label>
+    <input type="text" formControlName="descricao" />
+  </div>
+  <button type="button" (click)="editar()">Enviar</button>
+</form>
